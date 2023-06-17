@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <input>
+<script>
+let inp = document.querySelector('input');
+function f () {
+    let arr = inp.value.split('.').map(Number);
+    let newArr = arr.reverse();
+    let date = new Date (newArr); 
+    let day  = date.getDay();
+    let days = ['sun', 'mon', 'tu', 'wed', 
+	'thu', 'fri', 'sat'];
+    console.log(days[day]);
+}
+inp.addEventListener('blur', f);
+</script>
+
+</body>
+</html>
